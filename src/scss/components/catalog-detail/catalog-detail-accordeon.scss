@@ -1,0 +1,43 @@
+.catalog-detail-accordeon {
+    @include fluid (40, 100, 'margin-top');
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__left {
+        flex: 0 0 500px;
+    }
+    &__title {
+        @include fluid(36, 48, 'font-size');
+    }
+    &__right {
+        flex-grow: 1;
+    }
+}
+
+@include media($tablet) {
+    .catalog-detail-accordeon {
+        &__left {
+            flex: 1 1 auto;
+        }
+        &__right {
+            flex: 1 0 400px;
+        }
+    }
+}   
+
+@include media($mobile) {
+    .catalog-detail-accordeon {
+        &__container {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__left {
+            flex: 1 1 auto;
+        }
+        &__right {
+            flex: 1 1 auto;
+        }
+    }
+}   

@@ -1,0 +1,67 @@
+.partners {
+    .conditions-partners {
+        @include fluid(40, 100, 'margin-top');
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__title {
+            @include fluid(24, 48, 'font-size');
+        }
+        &__text {
+            @include fluid(14, 18, 'font-size');
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            width: 60%;
+        }
+        &__accordeon {
+            @include fluid(20, 40, 'margin-top');
+        }
+        &__accordeon-elem {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px 0;
+            @include notFirst {
+                border-top: 1px solid #E6E6E6;
+            }
+        }
+        &__accordeon-elem-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        &__accordeon-elem-title {
+            @include fluid(14, 18, 'font-size');
+        }
+        &__accordeon-elem-number {
+            @include fluid(14, 18, 'font-size');
+            opacity: .6;
+        }
+        &__accordeon-elem-text {
+            @include fluid(14, 18, 'font-size');
+            opacity: .4;
+        }
+        &__accordeon-elem-bottom-text {
+            font-size: 14px;
+            opacity: .6;
+            margin-top: 15px;
+        }
+        &__accordeon-group {
+            &:first-child {
+                border-top: 1px solid #E6E6E6;
+            }
+        }
+    }
+
+    @include media($mobile) {
+        .conditions-partners {
+            &__content {
+                width: 100%;
+            }
+        }
+    }   
+}

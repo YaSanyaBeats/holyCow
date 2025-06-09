@@ -1,0 +1,54 @@
+.faq-accordeon {
+    @include fluid(30, 60, 'margin-top');
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+    }
+    &__left {}
+    &__text {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+    &__btn {
+        padding: 16px 32px;
+    }
+    &__btn-group {
+        @include fluid(20, 40, 'margin-top');
+    }
+    &__right {
+        flex: 0 0 610px;
+    }
+}
+
+
+@include media($tablet) {
+    .faq-accordeon {
+        &__left {
+            flex: 1 1 400px;
+        }
+        &__right {
+            flex: 1 1 600px;
+        }
+        &__container {
+            gap: 40px;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .faq-accordeon {
+        &__container {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__left {
+            flex: 1 1 auto;
+        }
+        &__right {
+            flex: 1 1 auto;
+        }
+    }
+}   

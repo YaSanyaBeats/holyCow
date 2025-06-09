@@ -1,0 +1,62 @@
+.concept {
+    @include fluid(40, 120, 'margin-top');
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+    }
+    &__left {
+        flex: 0 0 480px;
+    }
+    &__title {
+        color: #999999;
+        @include fluid(24, 36, 'font-size');
+        font-weight: 500;
+        line-height: 1.4;
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid #E6E6E6;
+    }
+    &__card-title {
+        @include fluid(18, 24, 'font-size');
+        font-weight: 500;
+    }
+    &__text {
+        @include fluid(14, 16, 'font-size');
+        line-height: 1.4;
+        margin-right: 100px;
+        font-weight: 500;
+    }
+}
+
+@include media($tablet) {
+    .concept {
+        &__container {
+            flex-direction: column;
+            gap: 0;
+        }
+        &__left {
+            flex: 1 1 auto;
+        }
+        &__text {
+            margin-right: 0;
+        }
+        &__title {
+            margin-bottom: 0;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+
+}   

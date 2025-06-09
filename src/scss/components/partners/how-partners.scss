@@ -1,0 +1,83 @@
+.partners {
+    .how-partners {
+        @include fluid(40, 100, 'margin-top');
+        &__container {}
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        &__title {
+            @include fluid(24, 48, 'font-size');
+            font-weight: 500;
+        }
+        &__text {
+            max-width: calc(50% - 10px);
+            @include fluid(14, 18, 'font-size');
+        }
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @include fluid(30, 60, 'margin-top');
+            gap: 0 20px;
+        }
+        &__card {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #E6E6E6;
+            padding: 25px 0;
+            &:first-child {
+                border-top: 1px solid #E6E6E6;
+            }
+            &:nth-child(2) {
+                border-top: 1px solid #E6E6E6;
+            }
+        }
+        &__card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        &__card-title {
+            @include fluid(18, 24, 'font-size');
+        }
+        &__card-number {
+            font-size: 13px;
+            opacity: .4;
+        }
+        &__card-text {
+            @include fluid(14, 16, 'font-size');
+            opacity: .6;
+            margin-top: 10px;
+        }
+    }
+
+    @include media($tablet) {
+
+    }   
+
+
+    @include media($mobile) {
+        .how-partners {
+            &__title {
+                margin: 0;
+            }
+            &__text {
+                max-width: 100%;
+            }
+            &__row {
+                flex-direction: column;
+            }
+            &__grid {
+                grid-template-columns: 1fr;
+            }
+            &__card {
+                padding: 15px 0;
+                &:nth-child(2) {
+                    border-top: none;
+                }
+            }
+        }
+    }   
+}

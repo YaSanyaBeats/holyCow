@@ -1,0 +1,84 @@
+.main-title {
+    @include fluid(35, 70, 'margin-top');
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        margin: 10px 0 0 0;
+        @include fluid(40, 72, 'font-size');
+        font-weight: 500;
+        max-width: 680px;
+    }
+    &__right {
+        flex: 0 0 370px;
+    }
+    &__info-title {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    &__props {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    &__prop {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include notFirst {
+            padding-left: 15px;
+        }
+        @include notLast {
+            padding-right: 15px;
+            border-right: 1px solid #E6E6E6;
+        }
+        &_no-shrink {
+            flex-shrink: 0;
+        }
+    }
+    &__prop-icon {}
+    &__prop-text {
+        font-size: 13px;
+    }
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    &_review {
+        .main-title {
+            &__container {
+                align-items: flex-end;
+            }
+        }
+    }
+}
+
+@include media($tablet) {
+    .main-title {
+        &__container {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__right {
+            flex: 1 1 auto;
+        }
+        &_review {
+            .main-title {
+                &__container {
+                    align-items: stretch;
+                }
+            }
+        }
+    }
+}   
+
+
+@include media($mobile) {
+
+}   

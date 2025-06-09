@@ -1,0 +1,156 @@
+.services-info {
+    @include fluid(30, 60, 'margin-top');
+    &__container {}
+    &__tab-nav {
+        display: flex;
+        gap: 40px;
+    }
+    &__tab-link-wrapper {
+        &.uk-active {
+            .services-info {
+                &__tab-link {
+                    color:black;
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &__tab-link {
+        @include fluid(18, 24, 'font-size');
+        font-weight: 500;
+        color: #808080;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: .3s;
+        }
+    }
+    &__tab-content {
+        @include fluid(30, 60, 'margin-top');
+        display: flex;
+        justify-content: space-between;
+        gap: 120px;
+    }
+    &__tab-left {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        @include fluid(36, 48, 'font-size');
+        font-weight: 500;
+        margin: 0;
+    }
+    &__subtitle {
+        @include fluid(18, 24, 'font-size');
+        font-weight: 500;
+        line-height: 1.2;
+        @include fluid(20, 40, 'margin-top');
+    }
+    &__text {
+        @include fluid(14, 16, 'font-size');
+        line-height: 1.4;
+        margin-top: 25px;
+    }
+    &__price-label {
+        margin-top: 40px;
+        color: #666666;
+        font-size: 16px;
+    }
+    &__price-wrapper {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__price-value {
+        font-weight: 500;
+        font-size: 36px;
+    }
+    &__price-currency {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    &__form {
+        flex: 0 0 390px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        border-radius: 6px;
+        background: linear-gradient(to right, #C2F7E9 0%, #E1FA46 100%);
+        margin: 0;
+    }
+    &__form-title {
+        @include fluid(24, 36, 'font-size');
+        font-weight: 500;
+    }
+    &__form-text {
+        font-size: 13px;
+        margin-top: 15px;
+        line-height: 1.4;
+        opacity: .6;
+    }
+    &__input-group {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__input {
+        padding: 15px;
+    }
+    &__btn {
+        margin-top: 25px;
+    }
+}
+
+
+@include media($tablet) {
+    .services-info {
+        &__tab-nav {
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+        &__tab-content {
+            gap: 40px;
+            align-items: flex-start;
+        }
+        &__tab-left {
+            flex: 1 1 500px;
+        }
+        &__form {
+            flex: 1 1 500px;
+        }
+        &__price-wrapper {
+            margin-top: 0;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .services-info {
+        &__tab-nav {
+        }
+        &__tab-content {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+        }
+        &__tab-left {
+            flex: 1 1 auto;
+        }
+        &__form {
+            flex: 1 1 auto;
+        }
+        &__price-wrapper {
+        }
+    }
+}   

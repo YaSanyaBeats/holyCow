@@ -1,0 +1,67 @@
+.popular {
+    @include fluid(40, 100, 'margin-top');
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, calc((100% - 40px) / 3));
+        gap: 40px 20px;
+        @include fluid(25, 50, 'margin-top');
+    }
+    &__container {}
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include fluid(15, 30, 'margin-top');
+    }
+    &__tab {
+        display: flex;
+        @include fluid2(10, 20, 20, 40, 'gap');
+        flex-wrap: wrap;
+    }
+    &__tab-elem {
+        @include fluid(18, 24, 'font-size');
+        color: #808080;
+        position: relative;
+        &::after {
+            content: '';
+            height: 2px;
+            width: 0;
+            background: black;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            transition: .3s;
+        }
+        &.uk-active {
+            color: black;
+            &::after {
+                width: 100%;
+
+            }
+        }
+    }
+    &__mobile-btn {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@include media($tablet) {
+    .popular {
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .popular {
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+}   

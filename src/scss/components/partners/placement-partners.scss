@@ -1,0 +1,127 @@
+.partners {
+    .placement-partners {
+        @include fluid(40, 100, 'margin-top');
+        &__container {}
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        &__title {
+            @include fluid(24, 48, 'font-size');
+        }
+        &__text {
+            @include fluid(14, 18, 'font-size');
+        }
+        &__cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        &__card {
+            flex-grow: 1;
+            flex-basis: 20%;
+            background-color: #F8F8F8;
+            border-radius: 6px;
+            padding: 30px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__logo {
+            max-width: 100%;
+            object-fit: contain;
+        }
+        &__link {
+            margin-top: 60px;
+            @include fluid(14, 18, 'font-size');
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        &__big-cards {
+            margin-top: 20px;
+            gap: 20px;
+            display: flex;
+        }
+        &__big-card {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            background-color: #F8F8F8;
+            border-radius: 6px;
+            flex-basis: 50%;
+            &_filled {
+                background: linear-gradient(45deg, #65ECFF 0, #E5FB70 100%);
+            }
+        }
+        &__big-card-icon {
+            width: 27px;
+            height: 27px;
+            flex: 0 0 27px;
+        }
+        &__big-card-title {
+            margin-top: 80px;
+            font-weight: 500;
+            @include fluid(18, 24, 'font-size');
+        }
+        &__big-card-text {
+            margin-top: 20px;
+            @include fluid(14, 16, 'font-size');
+        }
+        &__big-card-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 6px;
+        }
+        &__big-card-link {
+            width: fit-content;
+        }
+        &__big-card-social-btn {
+            padding: 15px;
+        }
+        &__big-card-btn {
+            padding: 15px 25px;
+        }
+    }
+
+    @include media($tablet) {
+        .placement-partners {
+            &__card {
+                flex-basis: 40%;
+            }
+        }
+    }   
+
+    @include media($mobile) {
+        .placement-partners {
+            &__title {
+                margin: 0;
+            }
+            &__row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            &__cards {
+                margin-top: 20px;
+            }
+            &__card {
+                flex-basis: 100%;
+                padding: 20px;
+            }
+            &__big-cards {
+                flex-direction: column;
+            }
+            &__big-card {
+                padding: 20px;
+            }
+            &__big-card-title {
+                margin-top: 30px;
+            }
+            &__link {
+                margin-top: 20px;
+            }
+        }
+    }   
+}

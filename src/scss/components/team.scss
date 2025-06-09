@@ -1,0 +1,101 @@
+.team {
+    @include fluid(40, 60, 'margin-top');
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &__card {
+        display: flex;
+        gap: 40px;
+        border-top: 1px solid #E6E6E6;
+        padding-top: 30px;
+        &:first-child {
+            border-top: 0;
+        }
+        &:nth-child(2) {
+            border-top: 0;
+        }
+    }
+    &__card-left {
+        flex: 0 0 180px;
+        width: 180px;
+        height: 180px;
+    }
+    &__card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    &__card-right {
+        display: flex;
+        flex-direction: column;
+    }
+    &__card-title {
+        @include fluid(16, 24, 'font-size');
+    }
+    &__card-info {
+        @include fluid(14, 16, 'font-size');
+        margin-top: 10px;
+        flex-grow: 1;
+    }
+    &__card-group {
+        display: flex;
+        gap: 10px;
+    }
+    &__card-btn-social {
+        padding: 15px;
+    }
+    &__card-btn {
+
+    }
+}
+
+@include media($tablet) {
+    .team {
+        &__container {
+        }
+        &__card {
+            gap: 20px;
+        }
+        &__card-left {
+            width: 120px;
+            flex: 0 0 120px;
+            height: 120px;
+        }
+        &__card-btn {
+            padding: 10px 25px;
+        }
+        &__card-btn-social {
+            padding: 10px;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .team {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+        &__card {
+            justify-content: space-between;
+            align-items: center;
+            &:first-child {
+                border: none;
+                padding-top: 0;
+            }
+            &:nth-child(2) {
+                border-top: 1px solid #E6E6E6;
+            }
+        }
+        &__card-right {
+            flex-grow: 1;
+        }
+        &__card-group {
+            margin-top: 20px;
+        }
+    }
+}   

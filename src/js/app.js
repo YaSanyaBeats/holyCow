@@ -21,26 +21,63 @@ function isWebp() {
 
 isWebp();
 
-function initCopyCode() {
-    let codes = document.querySelectorAll('.code__body');
-    codes.forEach((elem) => {
-        elem.addEventListener('click', (event) => {
-            UIkit.notification.closeAll()
-            navigator.clipboard.writeText(elem.innerText).then(function() {
-                UIkit.notification({
-                    message: 'Код успешно скопирован',
-                    status: 'primary',
-                    pos: 'bottom-center',
-                    group: false,
-                    timeout: 5000
-                });
-            }, function(err) {
-                console.error('Произошла ошибка при копировании текста: ', err);
-            });
-        })
+function initSliders() {
+    let productCardSliders = new Swiper('.product__swiper', {
+        loop: true,
+        slidesPerView: 1,
+
+        // pagination: {
+        //     el: '.product__pagination',
+        //     clickable: true
+        // },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+
+    let catalogDetailSlider = new Swiper('.slideshow', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: '.slideshow__nav_next',
+            prevEl: '.slideshow__nav_prev',
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+            }
+        }
     })
 }
 
+function initCatalogFilter() {
+    let filterButton = document.querySelector('.catalog__filter-btn');
+    let sidebar = document.querySelector('.catalog__sidebar');
+    let catalogGrid = document.querySelector('.catalog__grid');
+    let timeoutID;
+    if (filterButton) {
+        filterButton.addEventListener('click', (event) => {
+            clearTimeout(timeoutID);
+            filterButton.classList.toggle('btn_accent');
+            filterButton.classList.toggle('catalog__filter-btn_active');
+            sidebar.classList.toggle('catalog__sidebar_active');
+            
+            catalogGrid.classList.add('catalog__grid_hidden');
+            timeoutID = setTimeout(() => {
+                catalogGrid.classList.remove('catalog__grid_hidden');
+                catalogGrid.classList.toggle('catalog__grid_slim');
+            }, 200)
+        })
+    }
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
-    initCopyCode();
+    initSliders();
+    if(!isTablet) {
+        initCatalogFilter();
+    }
+    
 })

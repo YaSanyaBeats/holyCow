@@ -1,0 +1,27 @@
+.reviews {
+    @include fluid(40, 100, 'margin-top');
+    &__container {}
+    &__grid {
+        @include fluid(20, 60, 'margin-top');
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@include media($tablet) {
+    .reviews {
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .reviews {
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}   

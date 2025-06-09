@@ -1,0 +1,93 @@
+<section class="popular">
+    <div class="popular__container container" uk-filter="target: .popular__grid">
+        <h2 class="section-title">Популярные объекты</h2>
+        <div class="popular__row">
+            <div class="popular__tab">
+                <a class="popular__tab-elem uk-active" href="#" uk-filter-control>Все</a>
+                <a class="popular__tab-elem" href="#" uk-filter-control="[data-bedrooms='1']">Одна спальня</a>
+                <a class="popular__tab-elem" href="#" uk-filter-control="[data-bedrooms='2']">Две спальни</a>
+            </div>
+            <a href="#">
+                <button class="btn hidden_mobile">В каталог</button>
+            </a>
+        </div>
+        
+        <div class="popular__grid">
+            @@include('components/product.html', {
+                'bedrooms': '1',
+                'title': 'Saturdays condo Rawai beach',
+                'image': '@img/product1.jpg',
+                'price': '1500',
+                'sale': '',
+                'tag': '',
+            })
+            @@include('components/product.html', {
+                'bedrooms': '2',
+                'title': 'Panora condo Surin beach',
+                'image': '@img/product2.jpg',
+                'price': '1500',
+                'sale': '',
+                'tag': '',
+            })
+            @@include('components/product.html', {
+                'bedrooms': '1',
+                'title': 'Rawai Beach Condo Rawai beach',
+                'image': '@img/product3.jpg',
+                'tag': '<div class="product__tag"><img src="@img/icons/tag.svg" class="product__tag-icon"><span class="product__tag-text">5%</span></div>',
+                'price': '1500',
+                'sale': '2200'
+            })
+            @@include('components/product.html', {
+                'bedrooms': '2',
+                'title': 'Palmetto condoKaron beach',
+                'image': '@img/product4.jpg',
+                'price': '1500',
+                'sale': '',
+                'tag': '',
+            })
+            @@include('components/product.html', {
+                'bedrooms': '2',
+                'title': 'Oceanstone condo BangTao beach',
+                'image': '@img/product5.jpg',
+                'price': '1500',
+                'sale': '',
+                'tag': '',
+            })
+            @@include('components/product.html', {
+                'bedrooms': '2',
+                'title': 'Aristo Resort Condo NaiHarn Beach',
+                'image': '@img/product6.jpg',
+                'price': '1500',
+                'sale': '',
+                'tag': '',
+            })
+            @@include('components/product.html', {
+                'bedrooms': '2',
+                'title': 'Rawai Beach Condo Rawai beach',
+                'image': '@img/product7.jpg',
+                'tag': '<div class="product__tag"><img src="@img/icons/tag.svg" class="product__tag-icon"><span class="product__tag-text">3%</span></div>',
+                'price': '1500',
+                'sale': '2200'
+            })
+            @@include('components/product.html', {
+                'bedrooms': '2',
+                'title': 'Panora condo Surin beach',
+                'image': '@img/product8.jpg',
+                'price': '1500',
+                'sale': '',
+                'tag': '',
+            })
+            @@include('components/product.html', {
+                'bedrooms': '2',
+                'title': 'Saturdays condo Rawai beach',
+                'image': '@img/product1.jpg',
+                'price': '1500',
+                'sale': '',
+                'tag': '',
+            })
+        </div>
+        <a href="#">
+            <button class="btn show_mobile popular__mobile-btn">В каталог</button>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+.benefits {
+    margin-top: 40px;
+    &__container {
+        display: flex;
+        gap: 20px;
+    }
+    &__card {
+        flex-grow: 1;
+        padding: 40px;
+        border: 1px solid #E6E6E6;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__number-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__number {
+        @include fluid(48, 64, 'font-size');
+    }
+    &__postfix {
+        @include fluid(48, 64, 'font-size');
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+@include media($tablet) {
+    .benefits {
+    }
+}   
+
+
+@include media($mobile) {
+    .benefits {
+        &__container {
+            flex-direction: column;
+        }
+        &__card {
+            gap: 0px;
+            padding: 20px;
+        }
+        &__number {
+        }
+    }
+}   

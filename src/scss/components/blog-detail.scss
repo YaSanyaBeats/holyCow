@@ -1,0 +1,261 @@
+.blog-detail {
+    margin-top: 20px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__tag {
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #99FDE3;
+        border-radius: 100px;
+        width: fit-content;
+        text-decoration: none;
+    }
+    &__title {
+        @include fluid(40, 64, 'font-size');
+        font-weight: 500;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        @include fluid(18, 24, 'font-size');
+        font-weight: 500;
+        @include fluid(20, 40, 'margin-top');
+        margin-bottom: 0;
+    }
+    &__img {
+        width: 100%;
+        @include fluid(30, 60, 'margin-top');
+        border-radius: 6px;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include fluid(20, 40, 'margin-top');
+        gap: 20px;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__author-name {
+        @include fluid(14, 16, 'font-size');
+        font-weight: 500;
+    }
+    &__author-info {
+        @include fluid(14, 16, 'font-size');
+        font-weight: 400;
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    &__date-wrapper {
+        display: flex;
+        align-items: center;
+        padding-right: 15px;
+        border-right: 1px solid #E6E6E6;
+        gap: 20px;
+    }
+    &__date {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    &__time {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    &__rate {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 15px;
+    }
+    &__rate-text {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    &__star {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+    }
+    &__rate-count {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    &__content-wrapper {
+        @include fluid(30, 60, 'margin-top');
+        display: flex;
+        justify-content: space-between;
+        gap: 120px;
+    }
+    &__content {
+        flex-grow: 1;
+        img {
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 300px;
+    }
+    &__form-card {
+        background: linear-gradient(to right, #c2f7e9 0%, #e1fa46 100%);
+        border-radius: 6px;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__form-card-icon {
+        width: 32px;
+        height: 32px;
+    }
+    &__form-card-title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    &__form-card-text {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    &__form-card-btn {
+        width: 100%;
+        margin-top: 25px;
+    }
+    &__popular-title {
+        margin: 0;
+        @include fluid(30, 60, 'margin-top');
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    &__popular-cards {
+        @include fluid(20, 40, 'margin-top');
+    }
+    &__popular-card {
+        display: flex;
+        flex-direction: column;
+        @include notFirst {
+            margin-top: 20px;
+        }
+    }
+    &__popular-card-img {
+        width: 100%;
+        border-radius: 6px;
+    }
+    &__popular-card-info {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    &__popular-card-date {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    &__popular-card-time {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    &__popular-card-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+    &__share {
+        background: linear-gradient(10deg, #65ECFF 0%, #E5FB70 100%);
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 40px;
+        border-radius: 6px;
+        @include fluid(20, 40, 'margin-top');
+    }
+    &__share-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__share-text {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__share-stars {
+        background: black;
+        border-radius: 6px;
+        display: flex;
+        gap: 13px;
+        padding: 15px 25px;
+    }
+    &__share-star {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+    }
+    &__share-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    &__share-buttons {
+        display: flex;
+        gap: 8px;
+    }
+    &__share-button {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 50px;
+        padding: 0;
+    }
+    &__share-button-icon {
+        width: 20px;
+        height: 20px;
+        color: white;
+        & path {
+            fill: white;
+        }
+    }
+}
+
+
+@include media($tablet) {
+    .blog-detail {
+        &__content-wrapper {
+            gap: 40px;
+        }
+    }
+
+}   
+
+
+@include media($mobile) {
+    .blog-detail {
+        &__info {
+            flex-direction: column;
+        }
+        &__content-wrapper {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__share {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__share-left {
+            align-items: flex-start;
+        }
+        &__share-right {
+            align-items: stretch;
+        }
+    }
+}   

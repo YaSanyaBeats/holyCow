@@ -1,0 +1,127 @@
+.about-steps {
+    @include fluid(40, 100, 'margin-top');
+    &__container {}
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include fluid(30, 60, 'margin-top');
+        gap: 20px;
+    }
+    &__card {
+        border: 1px solid #E6E6E6;
+        border-radius: 6px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        &_big {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+    }
+    &__card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__card-icon {
+        width: 27px;
+        height: 27px;
+        flex: 0 0 27px;
+    }
+    &__card-number {}
+    &__card-title {
+        @include fluid(18, 24, 'font-size');
+        margin-top: 20px;
+    }
+    &__subtitle {
+        margin-top: 10px;
+        @include fluid(14, 16, 'font-size');
+        opacity: .6;
+    }
+    &__card-list-ol {
+        border-top: 1px solid #E6E6E6;
+        border-bottom: 1px solid #E6E6E6;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    &__card-list-item {
+        @include fluid(14, 16, 'font-size');
+        padding: 7px 0;
+    }
+    &__card-text {
+        margin-top: 15px;
+        @include fluid(14, 16, 'font-size');
+        opacity: .6;
+        flex-grow: 1;
+    }
+    &__card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    &__card-btn-link {}
+    &__card-btn {
+        padding: 15px 25px;
+    }
+    &__card-link {
+        @include fluid(12, 14, 'font-size');
+        text-decoration: underline;
+        font-weight: 500;
+        padding: 15px 25px;
+    }
+    &__card-list-ul {
+        
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    &__card-list-item-ul {
+        border-top: 1px solid #E6E6E6;
+        padding: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+    }
+    &__card-list-item-text {}
+    &__card-list-item-icon {
+        width: 15px;
+        height: 10px;
+    }
+}
+
+@include media($tablet) {
+    .about-steps {
+        &__card-btn {
+            width: 100%;
+        }
+        &__card-link {
+            width: 100%;
+            text-align: center;
+        }
+        &__card-btn-link {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .about-steps {
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+        &__card {
+            &_big {
+                grid-row-end: 2;
+            }
+        }
+    }
+}   

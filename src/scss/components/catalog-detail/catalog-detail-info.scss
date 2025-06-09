@@ -1,0 +1,127 @@
+.catalog-detail-info {
+    @include fluid(40, 100, 'margin-top');
+    &__container {}
+    &__grid {
+        display: grid;
+        grid-template-columns: 50% 40%;
+        gap: 60px;
+        justify-content: space-between;
+    }
+    &__place {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__place-title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__place-description {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    &__complex {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__complex-title {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: right;
+    }
+    &__complex-description {
+        font-size: 16px;
+        text-align: right;
+        line-height: 1.4;
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+    }
+    &__price-title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    &__price-text {
+        font-size: 16px;
+        margin-top: 25px;
+        line-height: 1.4;
+    }
+    &__price-label {
+        margin-top: 60px;
+        color: #666666;
+        font-size: 16px;
+    }
+    &__price-wrapper {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__price-value {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    &__price-currency {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__props {
+        display: flex;
+        flex-direction: column;
+    }
+    &__prop {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #E6E6E6;
+        @include notFirst {
+            padding-top: 15px;
+        }
+    }
+    &__prop-title {
+        color: #666666;
+        font-size: 16px;
+
+    }
+    &__prop-value {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+@include media($mobile) {
+    .catalog-detail-info {
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        &__complex-title {
+            text-align: left;
+        }
+        &__complex-description {
+            text-align: left;
+        }
+        &__complex {
+            gap: 5px;
+        }
+        &__place {
+            gap: 5px;
+        }
+        &__price-label {
+            margin-top: 25px;
+        }
+        &__price-wrapper {
+            margin-top: 0;
+        }
+        &__prop {
+            padding-bottom: 10px;
+            &:not(:first-child) {
+                padding-top: 10px;
+            }
+        }
+    }
+}   

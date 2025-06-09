@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    @@include('html/head.html', {
+        'title': 'Каталог'
+    })
+    <body>
+        @@include('html/header.html', {})
+
+        <main class="main">
+            @@include('html/main-title_full.html', {
+                'title': 'Panora condo Surin condo beach'
+            })
+            @@include('html/catalog-detail/catalog-detail-slider.html', {})
+            @@include('html/catalog-detail/catalog-detail-info.html', {})
+            @@include('html/catalog-detail/catalog-detail-gallery.html', {})
+            @@include('html/catalog-detail/catalog-detail-props.html', {})
+            @@include('html/catalog-detail/catalog-detail-map.html', {})
+            @@include('html/catalog-detail/catalog-detail-accordeon.html', {})
+        </main>
+        
+        @@include('html/footer.html', {})
+        @@include('html/script.html', {})
+    </body>
+</html> 

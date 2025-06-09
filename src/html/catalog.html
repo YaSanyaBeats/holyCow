@@ -1,0 +1,229 @@
+<section class="catalog">
+    <div class="catalog__container container">
+        <div class="catalog__filter-row">
+            <button class="btn catalog__filter-btn">
+                <span>Фильтрация</span>
+                <div class="catalog__filter-icon">
+                    <div class="catalog__filter-icon-line"></div>
+                    <div class="catalog__filter-icon-line"></div>
+                    <div class="catalog__filter-icon-line"></div>
+                </div>
+            </button>
+            <div class="filter-input catalog__filter-input hidden_tablet">
+                <span class="filter-input__value-text">По популярности</span>
+                <div class="filter-input__value">
+                    <img src="@img/icons/schevron.svg" class="filter-input__value-icon" uk-svg>
+                </div>
+                <input type="date" class="filter-input__date">
+            </div>
+        </div>
+        <div class="catalog__wrapper">
+            <div class="catalog__sidebar">
+                <div class="catalog__filter filter">
+                    <span class="filter__title">Фильтр по каталогу</span>
+                    <form class="filter__form accordeon" uk-accordion="multiple: true">
+                        <div class="filter__group">
+                            <a class="uk-accordion-title accordeon__header filter__group-title-wrapper" href="#">
+                                <span class="filter__group-title">Количество комнат</span>
+                                <div class="filter__group-icon accordeon__plus">
+                                    <div class="accordeon__plus-line"></div>
+                                    <div class="accordeon__plus-line"></div>
+                                </div>
+                            </a>
+                            <div class="uk-accordion-content accordeon__content filter__group-content">
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">Одна спальня</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">Две спальни</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">Любое</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__group">
+                            <a class="uk-accordion-title accordeon__header filter__group-title-wrapper" href="#">
+                                <span class="filter__group-title">Количество человек</span>
+                                <div class="filter__group-icon accordeon__plus">
+                                    <div class="accordeon__plus-line"></div>
+                                    <div class="accordeon__plus-line"></div>
+                                </div>
+                            </a>
+                            <div class="uk-accordion-content accordeon__content filter__group-content">
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">1 - 2</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">2 - 3</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">3 - 5</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__group">
+                            <a class="uk-accordion-title accordeon__header filter__group-title-wrapper" href="#">
+                                <span class="filter__group-title">Ближайший пляж</span>
+                                <div class="filter__group-icon accordeon__plus">
+                                    <div class="accordeon__plus-line"></div>
+                                    <div class="accordeon__plus-line"></div>
+                                </div>
+                            </a>
+                            <div class="uk-accordion-content accordeon__content filter__group-content">
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">Карон, Karon Beach</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">Карон, Karon Beach</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">Патонг, Patong Beach</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">Патонг, Patong Beach</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">Карон, Karon Beach</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="checkbox" class="input" name="rooms">
+                                    <span class="filter__label-text">Патонг, Patong Beach</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__group">
+                            <a class="uk-accordion-title accordeon__header filter__group-title-wrapper" href="#">
+                                <span class="filter__group-title">Цена</span>
+                                <div class="filter__group-icon accordeon__plus">
+                                    <div class="accordeon__plus-line"></div>
+                                    <div class="accordeon__plus-line"></div>
+                                </div>
+                            </a>
+                            <div class="uk-accordion-content accordeon__content filter__group-content">
+                                <div class="filter__input-group">
+                                    <label class="input-placeholder">
+                                        <span class="input-placeholder__text">от</span>
+                                        <input type="text" class="input-placeholder__input" placeholder="100">
+                                    </label>
+                                    <label class="input-placeholder">
+                                        <span class="input-placeholder__text">до</span>
+                                        <input type="text" class="input-placeholder__input" placeholder="2000">
+                                    </label>
+                                </div>
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">до 1 000</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">1 000 – 1 500</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">1 500 – 2 000</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">2 000 – 3 000</span>
+                                </label>
+                                <label class="filter__label">
+                                    <input type="radio" class="input" name="rooms">
+                                    <span class="filter__label-text">свыше 3 000</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn filter__btn btn_disabled">Применить</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="catalog__grid">
+                @@include('components/product.html', {
+                    'bedrooms': '1',
+                    'title': 'Saturdays condo Rawai beach',
+                    'image': '@img/product1.jpg',
+                    'price': '1500',
+                    'sale': '',
+                    'tag': '',
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '2',
+                    'title': 'Panora condo Surin beach',
+                    'image': '@img/product2.jpg',
+                    'price': '1500',
+                    'sale': '',
+                    'tag': '',
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '1',
+                    'title': 'Rawai Beach Condo Rawai beach',
+                    'image': '@img/product3.jpg',
+                    'tag': '<div class="product__tag"><img src="@img/icons/tag.svg" class="product__tag-icon"><span class="product__tag-text">5%</span></div>',
+                    'price': '1500',
+                    'sale': '2200'
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '2',
+                    'title': 'Palmetto condoKaron beach',
+                    'image': '@img/product4.jpg',
+                    'price': '1500',
+                    'sale': '',
+                    'tag': '',
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '2',
+                    'title': 'Oceanstone condo BangTao beach',
+                    'image': '@img/product5.jpg',
+                    'price': '1500',
+                    'sale': '',
+                    'tag': '',
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '2',
+                    'title': 'Aristo Resort Condo NaiHarn Beach',
+                    'image': '@img/product6.jpg',
+                    'price': '1500',
+                    'sale': '',
+                    'tag': '',
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '2',
+                    'title': 'Rawai Beach Condo Rawai beach',
+                    'image': '@img/product7.jpg',
+                    'tag': '<div class="product__tag"><img src="@img/icons/tag.svg" class="product__tag-icon"><span class="product__tag-text">3%</span></div>',
+                    'price': '1500',
+                    'sale': '2200'
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '2',
+                    'title': 'Panora condo Surin beach',
+                    'image': '@img/product8.jpg',
+                    'price': '1500',
+                    'sale': '',
+                    'tag': '',
+                })
+                @@include('components/product.html', {
+                    'bedrooms': '2',
+                    'title': 'Saturdays condo Rawai beach',
+                    'image': '@img/product1.jpg',
+                    'price': '1500',
+                    'sale': '',
+                    'tag': '',
+                })
+            </div>
+        </div>
+        @@include('components/pagination.html')
+    </div>
+</section>

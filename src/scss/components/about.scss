@@ -1,0 +1,43 @@
+.about {
+    @include fluid(20, 60, 'margin-top');
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    &__title {
+        color: #999999;
+        font-weight: 500;
+        font-size: 36px;
+    }
+    &__text {
+        margin-left: 100px;
+        width: 500px;
+        @include fluid(16, 18,  'font-size');
+        line-height: 1.4;
+        font-weight: 500;
+    }
+    &__link {}
+}
+
+@include media($tablet) {
+    .about {
+        &__text {
+            margin-left: 0;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .about {
+        &__container {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__text {
+            width: 100%;
+        }
+    }
+}   

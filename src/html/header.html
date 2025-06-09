@@ -1,19 +1,69 @@
-<header class="header">
+<header class="header" uk-sticky>
     <div class="header__container container">
-        <span class="header__logo">
-            <a href="https://yasanyabeats.ru/" target="_blank">YaSanyaBeats</a> | 
-            <a href="https://github.com/YaSanyaBeats/initGulp/" target="_blank">Init Gulp</a>
-        </span>
-        <div class="header__social social">
-            <a href="https://github.com/YaSanyaBeats/" target="_blank">
-                <img class="social__icon" src="@img/icons/github.svg" uk-svg>
+        <div class="header__left">
+            <div class="header__burger burger" uk-toggle="target: #modal-menu">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
+            <a href="#" class="header__link">
+                <img src="@img/logo.svg" class="header__logo hidden_mobile">
+                <img src="@img/mobile-logo.svg" class="header__logo show_mobile">
             </a>
-            <a href="https://t.me/yasanyabeats/" target="_blank">
-                <img class="social__icon" src="@img/icons/telegram.svg" uk-svg>
-            </a>
-            <a href="https://wa.me/79130050320" target="_blank">
-                <img class="social__icon" src="@img/icons/whatsapp.svg" uk-svg>
-            </a>
+            <nav class="header__nav">
+                <ul class="header__menu hidden_tablet">
+                    <li class="header__item">
+                        <a href="#" class="header__link">Каталог</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Услуги</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Акции</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">О нас</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">FAQ</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Отзывы</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__right">
+            <ul class="header__menu hidden_mobile">
+                <li class="header__item">
+                    <a href="#" class="header__link">Telegram</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">WhatsApp</a>
+                </li>
+                <li class="header__item">
+                    <a href="tel:+66 83 790 3959" class="header__link">+66 83 790 3959</a>
+                </li>
+                <li class="header__item header__item_lang">
+                    <a href="#" class="header__link header__link_lang">RU</a>
+                    <a href="#" class="header__link header__link_lang header__link_active">ENG</a>
+                </li>
+            </ul>
+            <ul class="header__menu show_mobile">
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <img class="header__icon" src="@img/icons/telegram.svg" uk-svg>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <img class="header__icon" src="@img/icons/whatsapp.svg" uk-svg>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>

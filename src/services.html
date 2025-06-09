@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    @@include('html/head.html', {
+        'title': 'Услуги'
+    })
+    <body>
+        @@include('html/header.html', {})
+
+        <main class="main">
+            @@include('html/main-title.html', {
+                'title': "Наши услуги",
+                'subtitle': 'Lorem ipsum dolor sit amet consectetur. Nulla pharetra sed lorem nam tortor et amet. '
+            })
+            @@include('html/services/services-banner.html', {})
+            @@include('html/services/services-info.html', {})
+            @@include('html/services/services-gallery.html', {})
+            @@include('html/services/services-accordeon.html', {})
+           
+            @@include('html/feedback.html', {})
+        </main>
+
+        @@include('html/footer.html', {})
+        @@include('html/script.html', {})
+    </body>
+</html> 

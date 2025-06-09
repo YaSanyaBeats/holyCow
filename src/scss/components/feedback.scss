@@ -1,0 +1,79 @@
+.feedback {
+    margin: 0 15px;
+    @include fluid(40, 100, 'margin-top');
+   
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        background: linear-gradient(to right, #C2F7E9 0%, #E1FA46 100%);
+        border-radius: 6px;
+        padding: 60px;
+    }
+    &__title {
+        color: #333333;
+        margin: 0;
+        font-size: 48px;
+        line-height: 1.2;
+    }
+    &__form {
+    }
+    &__text {
+        font-size: 16px;
+        color: #333333;
+    }
+    &__row {
+        margin-top: 25px;
+        display: flex;
+        gap: 20px;
+    }
+    &__input {
+        width: 330px;
+    }
+    &__btn {
+        background-color: #333333;
+        padding: 16px 24px;
+        &_social {
+            padding: 16px;
+        }
+    }
+    &_social {
+        .feedback {
+            &__row {
+                gap: 10px;
+            }
+        }
+    }
+}
+
+@include media($tablet) {
+    .feedback {
+        &__container {
+            flex-direction: column;
+        }
+        &__text {
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+        &__row {
+            flex-direction: column;
+        }
+        &__input {
+            width: 100%;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .feedback {
+        &__container {
+            padding: 40px;
+        }
+        &__title {
+            font-size: 32px;
+        }
+    }
+}   

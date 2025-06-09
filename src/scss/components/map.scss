@@ -1,0 +1,101 @@
+.map {
+    @include fluid(40, 100, 'margin-top');
+    &__container {}
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+    }
+    &__text {
+        max-width: 560px;
+        font-weight: 500;
+        @include fluid(16, 18, 'font-size');
+        line-height: 1.4;
+    }
+    &__content {
+        @include fluid(20, 60, 'margin-top');
+        border: 1px solid #E6E6E6;
+        border-radius: 6px;
+        display: flex;
+    }
+    &__nav {
+        border-right: 1px solid #E6E6E6;
+        margin: 0;
+        padding: 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-right: 40px;
+        cursor: pointer;
+        @include any-hover {
+            & .map {
+                &__number {
+                    background-color: black;
+                    color: white;
+                }
+                &__item-name {
+                    color: #999999;
+                }
+            }
+        }
+    }
+    &__number {
+        border-radius: 50%;
+        border: 1px solid black;
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        transition: .3s;
+    }
+    &__item-name {
+        transition: .3s;
+        font-weight: 600;
+        font-size: 13px;
+    }
+    &__map {
+        flex-grow: 1;
+        margin: 20px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+}
+
+@include media($tablet) {
+    .map {
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+        
+    }
+}   
+
+
+@include media($mobile) {
+    .map {
+        &__content {
+            flex-direction: column-reverse;
+            position: relative;
+        }
+        &__nav {
+            display: none;
+        }
+        &__map {
+            height: 80vh;
+        }
+    }
+    
+}   

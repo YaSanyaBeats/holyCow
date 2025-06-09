@@ -1,32 +1,38 @@
-<div class="hero">
+<section class="hero">
     <div class="hero__container container">
-        <div class="hero__left">
-            <div class="hero__name-wrapper">
-                <h1 class="hero__name">Гончаров<br>Александр</h1>
-                <span class="hero__nick">@YaSanyaBeats</span>
+        <h1 class="hero__title">Недвижимость на Пхукете</h1>
+        <span class="hero__subtitle">Бронируйте апартаменты и виллы на райском острове</span>
+        <div class="hero__filter hidden_mobile">
+            <div class="hero__filter-input filter-input">
+                <span class="filter-input__title">Дата заезда</span>
+                <div class="filter-input__value">
+                    <span class="filter-input__value-text">18 июня</span>
+                    <img src="@img/icons/schevron.svg" class="filter-input__value-icon" uk-svg>
+                </div>
+                <input type="date" class="filter-input__date">
             </div>
-            <img class="hero__img" src="@img/avatar.png">
+            <div class="hero__filter-input filter-input">
+                <span class="filter-input__title">Дата выезда</span>
+                <div class="filter-input__value">
+                    <span class="filter-input__value-text">19 июня</span>
+                    <img src="@img/icons/schevron.svg" class="filter-input__value-icon" uk-svg>
+                </div>
+                <input type="date" class="filter-input__date">
+            </div>
+            <div class="hero__filter-input filter-input">
+                <span class="filter-input__title">Гости</span>
+                <div class="filter-input__value">
+                    <span class="filter-input__value-text">Взрослые: 1</span>
+                    <img src="@img/icons/schevron.svg" class="filter-input__value-icon" uk-svg>
+                </div>
+                <input type="date" class="filter-input__date">
+            </div>
+            <button class="hero__btn btn">Поиск</button>
         </div>
-        <div class="hero__right">
-            <h2 class="hero__title">Init Gulp</h2>
-            <div class="hero__code code">
-                <div class="code__header">
-                    <span class="code__title">DEV</span>
-                </div>
-                <div class="code__body">
-                    <p class="code__text">npm run dev</p>
-                    <img class="code__copy" src="@img/icons/copy.svg">
-                </div>
-            </div>
-            <div class="hero__code code">
-                <div class="code__header">
-                    <span class="code__title">PROD</span>
-                </div>
-                <div class="code__body">
-                    <p class="code__text">npm run build</p>
-                    <img class="code__copy" src="@img/icons/copy.svg">
-                </div>
-            </div>
-        </div>
+        <div class="btn show_mobile hero__mobile-btn">Забронировать</div>
     </div>
-</div>
+    @@include('components/banner.html', {
+        'class': 'hero__banner-container',
+        'image': '@img/banner.jpg'
+    })
+</section>

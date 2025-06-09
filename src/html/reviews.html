@@ -1,0 +1,28 @@
+<section class="reviews">
+    <div class="reviews__container container">
+        <h2 class="section-title">Отзывы клиентов</h2>
+        <div class="reviews__grid">
+            @@include('components/review.html', {
+                'name': 'Валерий',
+                'img': '@img/review1.jpg'
+            })
+            @@include('components/review.html', {
+                'name': 'Марья Ивановна',
+                'img': '@img/review2.jpg'
+            })
+            @@include('components/review.html', {
+                'name': 'Евгений Саркасян',
+                'img': '@img/review3.jpg'
+            })
+            @@include('components/review.html', {
+                'name': 'Валерий',
+                'img': '@img/review1.jpg'
+            })
+            @@include('components/review.html', {
+                'name': 'Марья Ивановна',
+                'img': '@img/review2.jpg'
+            })
+            @@include('components/review-more.html')
+        </div>
+    </div>
+</section>

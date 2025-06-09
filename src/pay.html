@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    @@include('html/head.html', {
+        'title': 'Оплата и бронирование'
+    })
+    <body>
+        @@include('html/header.html', {})
+
+        <main class="main">
+            @@include('html/main-title.html', {
+                'title': "Оплата и бронирование",
+                'subtitle': ''
+            })
+            @@include('html/pay/pay-accordeon.html', {})
+           
+            @@include('html/feedback_social.html', {})
+        </main>
+
+        @@include('html/footer.html', {})
+        @@include('html/script.html', {})
+    </body>
+</html> 

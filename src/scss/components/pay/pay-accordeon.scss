@@ -1,0 +1,72 @@
+.pay-accordeon {
+    @include fluid(30, 60, 'margin-top');
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 120px;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__nav {
+        &.uk-active {
+            .pay-accordeon {
+                &__link {
+                    color:black;
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &__link {
+        @include fluid(18, 24, 'font-size');
+        font-weight: 500;
+        color: #808080;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: .3s;
+        }
+    }
+    &__right {
+        flex: 0 0 700px;
+    }
+    &__content {}
+}
+
+@include media($tablet) {
+    .pay-accordeon {
+        &__container {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__left {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__right {
+            flex: 1 1 auto;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .pay-accordeon {
+        &__left {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+}   

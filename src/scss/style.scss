@@ -1,26 +1,73 @@
-@use 'sass:math';
+// @use 'sass:math';
 
-/** Подключение шрифтов локально из папки "./src/fonts" */
+// /** Подключение шрифтов локально из папки "./src/fonts" */
 @import 'config/fonts';
 
-/** Подключение переменных */
+// /** Подключение переменных */
 @import 'config/vars';
 
-/** Подключение sass function и mixins и extends стилей */
+// /** Подключение sass function и mixins и extends стилей */
 @import 'config/functions';
 @import 'config/mixins';
 @import 'config/keyframes';
 
-@import 'libs/normalize';
+// // @import 'libs/normalize';
 
-/** Общие параметры, шаблоны(заготовки) и вспомогательные классы */
+// /** Общие параметры, шаблоны(заготовки) и вспомогательные классы */
 @import 'config/base';
 
-/** БЕМ блоки используемые во всё проекте */
+// /** БЕМ блоки используемые во всё проекте */
 @import 'config/common';
 
-/** Подключение стилей отдельных блоков и секций */
-@import 'components/header';
-@import 'components/footer';
+// /** Подключение стилей отдельных блоков и секций */
+// @import 'components/header';
+// @import 'components/footer';
 
-@import 'components/hero';
+// @import 'components/hero';
+// @import 'components/about';
+@import 'components/benefits';
+// @import 'components/map';
+// @import 'components/feedback';
+// @import 'components/popular';
+// @import 'components/product';
+// @import 'components/review';
+// @import 'components/reviews';
+// @import 'components/how';
+// @import 'components/blog';
+@import 'components/main-title';
+// @import 'components/catalog';
+// @import 'components/pagination';
+@import 'components/slideshow';
+// @import 'components/license';
+// @import 'components/reviews-full';
+// @import 'components/blog-full';
+// @import 'components/contacts';
+// @import 'components/blog-detail';
+
+// @import 'components/catalog-detail/catalog-detail-info';
+// @import 'components/catalog-detail/catalog-detail-gallery';
+// @import 'components/catalog-detail/catalog-detail-props';
+// @import 'components/catalog-detail/catalog-detail-map';
+// @import 'components/catalog-detail/catalog-detail-accordeon';
+
+// @import 'components/about/benefits-title';
+@import 'components/about/concept';
+// @import 'components/about/about-services';
+// @import 'components/about/about-steps';
+
+// @import 'components/services/services-info';
+
+// @import 'components/pay/pay-accordeon';
+
+// @import 'components/faq/faq-accordeon';
+
+// @import 'components/modal';
+
+
+@import 'components/team';
+@import 'components/partners/how-partners';
+@import 'components/partners/benefits-partners';
+@import 'components/partners/conditions-partners';
+@import 'components/partners/center-system-partners';
+@import 'components/partners/placement-partners';
+@import 'components/partners/contacts-partners';

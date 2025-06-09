@@ -1,0 +1,81 @@
+.partners {
+    .benefits-partners {
+        @include fluid(30, 60, 'margin-top');
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        &__title {
+            opacity: .4;
+            @include fluid(24, 36, 'font-size');
+        }
+        &__right {
+            flex: 0 0 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__card {
+            background-color: #F8F8F8;
+            padding: 30px 40px 10px 40px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__card-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        &__icon {
+            width: 30px;
+            height: 30px;
+            flex: 0 0 30px;
+        }
+        &__card-number {
+            font-size: 13px;
+            opacity: .4;
+        }
+        &__accordeon {}
+        &__card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 10px;
+        }
+        &__card-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        &__card-check {
+            width: 15px;
+            flex: 0 0 15px;
+            height: 10px;
+        }
+        &__card-value {
+            font-size: 16px;
+        }
+        &__accordeon-group {
+            border-bottom: none;
+        }
+    }
+
+    @include media($tablet) {
+
+    }   
+
+
+    @include media($mobile) {
+        .benefits-partners {
+            &__container {
+                flex-direction: column;
+            }
+            &__title {
+                margin: 0;
+            }
+        }
+    }   
+}

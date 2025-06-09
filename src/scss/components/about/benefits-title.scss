@@ -1,0 +1,35 @@
+.benefits-title {
+    @include fluid(30, 60, 'margin-top');
+    &__container {}
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    &__title {
+        @include fluid(24, 36, 'font-size');
+        font-weight: 500;
+        color: #999999;
+        line-height: 1.4;
+    }
+    &__text {
+        @include fluid(16, 18, 'font-size');
+        line-height: 1.4;
+        max-width: 600px;
+        font-weight: 500;
+    }
+}
+
+@include media($tablet) {
+    .benefits-title {
+        &__row {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+}   

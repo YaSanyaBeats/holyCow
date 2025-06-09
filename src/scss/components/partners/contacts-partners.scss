@@ -1,0 +1,113 @@
+.partners {
+    .contacts-partners {
+        @include fluid(40, 100, 'margin-top');
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        &__left {
+            display: flex;
+            flex-direction: column;
+        }
+        &__title {
+            @include fluid(24, 48, 'font-size');
+            margin: 0;
+        }
+        &__elems {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__elem {
+            display: flex;
+            flex-direction: column;
+            @include notFirst {
+                margin-top: 20px;
+            }
+        }
+        &__elem-title {
+            opacity: .4;
+            font-weight: 500;
+            padding: 10px 0;
+            @include fluid(14, 18, 'font-size');
+            
+        }
+        &__elem-content {
+            display: flex;
+            gap: 20px;
+            border-top: 1px solid #E6E6E6;
+            padding-top: 10px;
+            flex-wrap: wrap;
+        }
+        &__elem-value {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-basis: 45%;
+            gap: 5px;
+        }
+        &__elem-value-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        &__elem-value-title {
+            font-weight: 500;
+            @include fluid(18, 24, 'font-size');
+        }
+        &__elem-value-text {
+            @include fluid(14, 16, 'font-size');
+        }
+        &__elem-value-icon {
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+        }
+        &__btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        &__btn-group-link {}
+        &__right {
+            flex: 0 0 500px;
+        }
+        &__map {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+    }
+
+    @include media($tablet) {
+        .contacts-partners {
+            &__right {
+                flex: 0 0 400px;
+            }
+            &__elem-value-icon {
+                width: 18px;
+                height: 18px;
+                flex: 0 0 18px;
+            }
+        }
+    }   
+
+
+    @include media($mobile) {
+        .contacts-partners {
+            &__container {
+                flex-direction: column;
+            }
+            &__btn-group {
+                flex-direction: column;
+            }
+            &__btn-group-link {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }   
+}

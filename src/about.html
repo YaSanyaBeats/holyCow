@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    @@include('html/head.html', {
+        'title': 'О нас'
+    })
+    <body>
+        @@include('html/header.html', {})
+
+        <main class="main">
+            @@include('html/main-title.html', {
+                'title': "Holy cow that's outta this world",
+                'subtitle': 'Lorem ipsum dolor sit amet consectetur. Nulla pharetra sed lorem nam tortor et amet. '
+            })
+            @@include('html/about/about-banner.html', {})
+            @@include('html/about/about-steps.html', {})
+            @@include('html/about/benefits-title.html', {})
+            @@include('html/benefits.html', {})
+            @@include('html/about/concept.html', {})
+            @@include('html/about/about-services.html', {})
+            @@include('html/reviews.html', {})
+            @@include('html/license.html', {})
+            @@include('html/feedback.html', {})
+        </main>
+
+        @@include('html/footer.html', {})
+        @@include('html/script.html', {})
+    </body>
+</html> 

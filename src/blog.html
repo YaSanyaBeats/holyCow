@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    @@include('html/head.html', {
+        'title': 'Блог'
+    })
+    <body>
+        @@include('html/header.html', {})
+
+        <main class="main">
+            @@include('html/main-title.html', {
+                'title': 'Блог о жизни на Пхукете',
+                'subtitle': ''
+            })
+            @@include('html/blog-full.html', {})
+        </main>
+
+        @@include('html/footer.html', {})
+        @@include('html/script.html', {})
+    </body>
+</html> 

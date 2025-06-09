@@ -1,0 +1,48 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    @include fluid(20, 40, 'padding-top');
+    @include fluid(30, 60, 'margin-top');
+    border-top: 1px solid #E6E6E6;
+    &__left {
+        display: flex;
+        gap: 10px;
+    }
+    &__btn {
+        width: 32px;
+        flex: 0 0 32px;
+        height: 32px;
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        padding: 0;
+        @include any-hover {
+            background-color: #E6E6E6;
+        }
+        &_active {
+            background-color: black;
+            color: white;
+            @include any-hover {
+                background-color: black;
+            }
+        }
+        
+    }
+    &__right {
+        display: flex;
+        gap: 10px;
+    }
+    &__nav-button {
+        padding: 8px 24px;
+    }
+}
+
+@include media($mobile) {
+    .pagination {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        &__right {
+        }
+    }
+}   

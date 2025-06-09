@@ -1,0 +1,130 @@
+.blog-full {
+    &__container {}
+    &__tags {
+        border-top: 1px solid #E6E6E6;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        @include fluid(20, 40, 'margin-top');
+        @include fluid(15, 30, 'padding-top');
+    }
+    &__tag {
+        padding: 10px 20px;
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        transition: .3s;
+        border-radius: 50px;
+        &_active {
+            background-color: black;
+            color: white;
+            .blog-full {
+                &__tag-text {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &__tag-text {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &__grid {
+        @include fluid(35, 70, 'margin-top');
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px 20px;
+    }
+}
+
+.blog-card {
+    &__img-wrapper {
+        position: relative;
+        padding-top: 85%;
+        overflow: hidden;
+        border-radius: 6px;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s;
+    }
+    &__info {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    &__tag {
+        background-color: #99FDE3;
+        padding: 10px 15px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+    }
+    &__date-wrapper {
+        display: flex;
+        gap: 20px;
+    }
+    &__date {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    &__time {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 20px 0 0 0;
+        line-height: 1.4;
+    }
+    @include any-hover {
+        .blog-card {
+            &__img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@include media($tablet) {
+    .blog-full {
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}   
+
+
+@include media($mobile) {
+    .blog-full {
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        &__tag {
+            padding: 5px 15px;
+        }
+    }
+    .blog-card {
+        &__info {
+            margin-top: 15px;
+        }
+        &__title {
+            margin-top: 10px;
+        }
+        &__date-wrapper {
+            gap: 10px;
+        }
+    }
+}   

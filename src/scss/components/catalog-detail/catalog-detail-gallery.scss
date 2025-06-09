@@ -1,0 +1,30 @@
+.catalog-detail-gallery {
+    @include fluid(40, 100, 'margin-top');
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        color: #999999;
+        margin: 0;
+    }
+    &__text {
+        max-width: 650px;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+}
+
+@include media($tablet) {
+    .catalog-detail-gallery {
+        &__container {
+            flex-direction: column;
+        }
+        
+    }
+}   
